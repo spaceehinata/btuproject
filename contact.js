@@ -1,22 +1,19 @@
 document.getElementById("contactForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
 
     let isValid = true;
 
-    // Get form field values
     let firstName = document.getElementById("firstName").value.trim();
     let lastName = document.getElementById("lastName").value.trim();
     let email = document.getElementById("email").value.trim();
     let password = document.getElementById("password").value.trim();
 
-    // Clear previous error messages and styles
     const fields = ["firstName", "lastName", "email", "password"];
     fields.forEach((field) => {
         document.getElementById(field).classList.remove("error-border");
         document.getElementById(field + "Error").textContent = "";
     });
 
-    // Validation
     if (firstName === "") {
         document.getElementById("firstName").classList.add("error-border");
         document.getElementById("firstNameError").textContent = "First name is required.";
@@ -49,9 +46,8 @@ document.getElementById("contactForm").addEventListener("submit", function (even
         isValid = false;
     }
 
-    // If all fields are valid, redirect to index.html
     if (isValid) {
         alert("Form submitted successfully!");
-        window.location.href = "index.html"; // Redirect to index.html
+        window.location.href = "index.html"; 
     }
 });
