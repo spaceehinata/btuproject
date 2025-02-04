@@ -32,7 +32,6 @@ document.getElementById("search-box").addEventListener("input", function () {
   const filteredProducts = allProducts.filter((product) =>
     product.title.toLowerCase().includes(query)
   );
-  // Update both containers with the filtered products
   const firstGroup = filteredProducts.slice(0, 8);
   const secondGroup = filteredProducts.slice(8, 16);
   displayProducts(firstGroup, "products-container");
