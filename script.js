@@ -187,3 +187,5 @@ document.getElementById("search-box").addEventListener("input", function () {
     setCookie('cookiesAccepted', 'true', 365); // 365 დღე
     document.getElementById('cookie-notification').style.display = 'none'; // notification-ი დამალულია
   });
+
+  
